@@ -17,6 +17,8 @@ public class Done_GameController : MonoBehaviour
 	private bool gameOver;
 	private bool restart;
 	private int score;
+	public int mile = 25000000;
+
 	
 	void Start ()
 	{
@@ -72,12 +74,12 @@ public class Done_GameController : MonoBehaviour
 	
 	void UpdateScore ()
 	{
-		scoreText.text = "Score: " + score;
+		scoreText.text = "Score: " + score + "\nDistance Remaining To Mars (miles): " +(mile-score*100);
 	}
 	
 	public void GameOver ()
 	{
-		gameOverText.text = "Game Over!";
+		gameOverText.text = "Crashed...Try Again";
 		gameOver = true;
 	}
 }
